@@ -1,0 +1,20 @@
+# R and RStudio
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+
+# Controlled-access and processed study data
+testdata/
+data/pathway_guided_submodules.txt
+data/optimization/pdac_discrimination_expression.tsv
+data/optimization/pdac_discrimination_samples.tsv
+
+# Generated analysis results
+results/*
+!results/.gitkeep
+
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+*.swp

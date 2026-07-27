@@ -1,0 +1,39 @@
+PENDR local run notes
+
+No source code was modified during the local run.
+
+What was added/copied for smoke testing:
+- data/pathway_guided_submodules.txt was copied from data/pathway_guided_submodules.example.txt
+- testdata/ was created from files under data/examples/
+- data/optimization/ was created from files under data/examples/
+- results/ contains outputs generated from the example data
+
+Local R executable used:
+C:\Program Files\R\R-4.5.0\bin\Rscript.exe
+
+Smoke-test commands that passed:
+& 'C:\Program Files\R\R-4.5.0\bin\Rscript.exe' tests\test_simms_compat.R
+& 'C:\Program Files\R\R-4.5.0\bin\Rscript.exe' run_pipeline.R validate
+& 'C:\Program Files\R\R-4.5.0\bin\Rscript.exe' run_pipeline.R score CPTAC-PDAC
+& 'C:\Program Files\R\R-4.5.0\bin\Rscript.exe' run_pipeline.R score TCGA-PDAC
+& 'C:\Program Files\R\R-4.5.0\bin\Rscript.exe' run_pipeline.R score ICGC-PDAC-CA
+& 'C:\Program Files\R\R-4.5.0\bin\Rscript.exe' run_pipeline.R meta-analysis
+
+The optimize stage did not run because these R packages are missing:
+- pROC
+- org.Hs.eg.db
+
+The generated results are from tiny example data only. They confirm that the
+pipeline wiring works, but they are not meaningful scientific results.
+
+To run with real data, replace these files:
+- data/pathway_guided_submodules.txt
+- testdata/datasets.txt
+- testdata/Pancreatic ductal adenocarcinoma1/patient_annotation.txt
+- testdata/Pancreatic ductal adenocarcinoma1/mRNA_abundance.txt
+- testdata/Pancreatic ductal adenocarcinoma2/patient_annotation.txt
+- testdata/Pancreatic ductal adenocarcinoma2/mRNA_abundance.txt
+- testdata/Pancreatic ductal adenocarcinoma3/patient_annotation.txt
+- testdata/Pancreatic ductal adenocarcinoma3/mRNA_abundance.txt
+- data/optimization/pdac_discrimination_expression.tsv
+- data/optimization/pdac_discrimination_samples.tsv

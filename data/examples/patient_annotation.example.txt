@@ -1,0 +1,4 @@
+sample_id	Tumour	survtime	survstat	survtime.unit
+sample_001	Yes	532	1	days
+sample_002	Yes	910	0	days
+sample_003	Yes	274	1	days

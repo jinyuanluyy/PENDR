@@ -1,0 +1,4 @@
+dataset	survstat	survtime	survtime.unit	mRNA	annotations
+Pancreatic ductal adenocarcinoma1	e.rfs	t.rfs	t.rfs.unit	mRNA_abundance.txt	patient_annotation.txt
+Pancreatic ductal adenocarcinoma2	e.dfs	t.dfs	t.dfs.unit	mRNA_abundance.txt	patient_annotation.txt
+Pancreatic ductal adenocarcinoma3	e.rfs	t.rfs	t.rfs.unit	mRNA_abundance.txt	patient_annotation.txt
